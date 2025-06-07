@@ -25,22 +25,22 @@
             <div class="mt-4 flex flex-col gap-2">
                 <x-toggle wire:model="checkFormat" :disabled="$cleaning">
                     <x-slot:label>
-                        Controlla formato email
+                        Verifica che l’indirizzo email sia scritto correttamente (formato valido)
                     </x-slot:label>
                 </x-toggle>
                 <x-toggle wire:model="checkDuplicate" :disabled="$cleaning">
                     <x-slot:label>
-                        Rimuovi duplicati
+                        Rimuovi indirizzi email presenti più di una volta nella lista
                     </x-slot:label>
                 </x-toggle>
                 <x-toggle wire:model="checkDisposable" :disabled="$cleaning">
                     <x-slot:label>
-                        Blocca domini usa e getta
+                        Escludi indirizzi email temporanei o usa e getta (es: mailinator.com, 10minutemail.com)
                     </x-slot:label>
                 </x-toggle>
                 <x-toggle wire:model="checkMx" :disabled="$cleaning">
                     <x-slot:label>
-                        Controlla dominio MX (molto lento)
+                        Verifica se il dominio dell'email esiste e dispone di un record MX valido (operazione lenta)
                     </x-slot:label>
                 </x-toggle>
                 {{-- <x-toggle wire:model="checkSmtp" :disabled="$cleaning">
